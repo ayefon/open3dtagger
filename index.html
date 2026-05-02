@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open 3D Tagger</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f9fafb;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .hero h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero p {
+            font-size: 1.15em;
+            color: #6e6e73;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        .card h2 {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .card p {
+            color: #424245;
+            margin-bottom: 12px;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #424245;
+        }
+        .features li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: #007AFF;
+            font-weight: 700;
+        }
+        .links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+        .links a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            color: #6e6e73;
+            font-size: 0.85em;
+            margin-top: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Open 3D Tagger</h1>
+            <p>Read and write NFC tags on 3D printer filament spools using the OpenTag3D open standard.</p>
+        </div>
+
+        <div class="card">
+            <h2>About</h2>
+            <p>Open 3D Tagger turns your iPhone into a filament spool manager. Tap your phone to an NFC tag on any spool to instantly see material type, color, manufacturer, print temperatures, and more.</p>
+            <p>Write your own tags so printers and slicers can automatically configure for each spool. Edit and rewrite tags as your filament data changes.</p>
+        </div>
+
+        <div class="card">
+            <h2>Features</h2>
+            <ul class="features">
+                <li>Read OpenTag3D NFC tags with a single tap</li>
+                <li>Write filament data including material, colors, temperatures, and physical properties</li>
+                <li>Edit and rewrite existing tags with updated information</li>
+                <li>Extended data support: serial numbers, drying settings, volumetric speeds, and more</li>
+                <li>Compatible with NTAG213, NTAG215, NTAG216, and SLIX2 tags</li>
+                <li>Built on the OpenTag3D v1.000 open specification</li>
+                <li>Fully offline &mdash; all data stays on your device</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Requirements</h2>
+            <p>iPhone 7 or later with NFC capability. Compatible NFC tags (NTAG213, NTAG215, NTAG216, or SLIX2) are required for reading and writing.</p>
+        </div>
+
+        <div class="links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </div>
+
+        <footer>
+            &copy; 2025 Don Babcock. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

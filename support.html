@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support &mdash; Open 3D Tagger</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f9fafb;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 32px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        .card h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .card p {
+            color: #424245;
+            margin-bottom: 12px;
+        }
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            color: #6e6e73;
+            font-size: 0.85em;
+            margin-top: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back">&larr; Back</a>
+        <h1>Support</h1>
+
+        <div class="card">
+            <h2>Requirements</h2>
+            <p>Open 3D Tagger requires an iPhone 7 or later with NFC capability. You also need compatible NFC tags: NTAG213 (144 bytes, core data only), NTAG215 (504 bytes), NTAG216 (888 bytes), or SLIX2 (320 bytes) for full core and extended data.</p>
+        </div>
+
+        <div class="card">
+            <h2>NFC scan sheet doesn't appear</h2>
+            <p>Make sure you're tapping the "Scan Tag" or "Write to Tag" button, not the tab bar icon. The NFC scan sheet only appears after pressing one of these action buttons.</p>
+            <p>If you've never used NFC on this device, iOS will prompt you for permission the first time. Check Settings &gt; Privacy &amp; Security &gt; NFC to ensure it's enabled.</p>
+        </div>
+
+        <div class="card">
+            <h2>Tag not reading</h2>
+            <p>The iPhone's NFC antenna is located at the top rear of the device, near the camera module. Hold the top of your iPhone directly against the NFC tag on the spool. Keep it still for a moment while the scan completes.</p>
+            <p>If you see "No OpenTag3D data on this tag," the tag either hasn't been written with OpenTag3D data or uses a different format.</p>
+        </div>
+
+        <div class="card">
+            <h2>Tag too small error when writing</h2>
+            <p>NTAG213 tags (144 bytes) only support core data fields. If you've enabled "Include Extended Data" in the Write form, you'll need a larger tag: SLIX2 (320 bytes), NTAG215 (504 bytes), or NTAG216 (888 bytes).</p>
+            <p>Disable the "Include Extended Data" toggle to write core-only data to smaller tags.</p>
+        </div>
+
+        <div class="card">
+            <h2>Temperature values seem wrong</h2>
+            <p>The OpenTag3D specification stores temperatures in 5&deg;C increments. Values are rounded to the nearest multiple of 5 during encoding. For example, 213&deg;C will be stored as 215&deg;C. This is by design and matches the spec.</p>
+        </div>
+
+        <div class="card">
+            <h2>How to edit a tag</h2>
+            <p>First, read the tag using the Read tab. Then tap "Edit &amp; Rewrite" next to the Scan button. This loads all the tag's data into the Write form where you can make changes. Tap "Write to Tag" and hold your phone near the tag to save.</p>
+        </div>
+
+        <div class="card">
+            <h2>Tag placement on spools</h2>
+            <p>The OpenTag3D specification recommends two tags per spool, one on each end directly opposite each other, centered 56mm from the spool center. This allows automated readers mounted on either side of a printer to detect the spool.</p>
+        </div>
+
+        <div class="card">
+            <h2>Contact &amp; Bug Reports</h2>
+            <p>For bug reports, feature requests, or questions, please <a href="https://github.com/ayefon/open3dtagger/issues">open an issue on GitHub</a>.</p>
+        </div>
+
+        <footer>
+            &copy; 2025 Don Babcock. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
